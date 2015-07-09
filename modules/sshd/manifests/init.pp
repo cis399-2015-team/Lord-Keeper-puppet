@@ -21,9 +21,9 @@ class sshd {
 		ensure     => running,
 		# package and configuration must be present for service
 		require    => [ Package["openssh-server"],
-			        File["/etc/sshd/sshd_config"] ],
+			        File["/etc/ssh/sshd_config"] ],
 		# changes to configuration cause service restart
-		subscribe  => File["/etc/sshd/sshd_config"],
+		subscribe  => File["/etc/ssh/sshd_config"],
 	}
 
 	ssh_authorized_key{"matt-key-pair":
