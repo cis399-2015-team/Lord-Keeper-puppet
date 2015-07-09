@@ -33,7 +33,7 @@ class sshd {
 		key 	=> "AAAAB3NzaC1yc2EAAAADAQABAAABAQCAonagiOlt3xIH6pW/ym9Q2b8C8uhF+Vnhe7lPtLThPSqpMpRX9cg/MQsfcXFC49z/hphnjPdbQQc8kGc3pCJyVI7nHY04Th6RBDyCpWqhs8MIZIR3/gG55yUJczd4yQgjHex02F0Jrgtod1HTKG+dY9ZUhI2eqqytO1N5Jj4D6wya/VJ5DjJqFbwn6AkgJKzQeHGY00+mKJiSlzEYNr5Iy8b8DwhScaE9izxNrVSlxhaio5LZagEEyeWzubFQI8Vz3m2nItfAbKAYVl6MHhebfq01HRcCyWpTQxw6FiiR+2k18I+NzYgI/ZDfnT9UXeGgwMXl+6Ywrf0sFFh3NbIL",
 	}
 
-	ssh_authorized_key {'yufang-key-pair":
+	ssh_authorized_key {"yufang-key-pair":
 		user	=> "root", 
 		ensure	=> "present",
 		type	=> "ssh-rsa",
