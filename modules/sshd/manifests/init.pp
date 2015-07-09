@@ -5,10 +5,7 @@ class sshd {
 
 	file { "/etc/ssh/sshd_config":
 
-		source  =>  [
-			# from modules/smartd/files/$hostname/smartd.conf
-			"puppet:///modules/sshd/sshd_conf",
-		],
+		source  => "puppet:///modules/sshd/sshd_conf",
 		mode    => 444,
 		owner   => root,
 		group   => root,
@@ -22,13 +19,17 @@ class sshd {
 		enable     => true,
 		# restart service if it is not running
 		ensure     => running,
-		# "service smartd status" returns useful service status info
-
 		# package and configuration must be present for service
 		require    => [ Package["openssh-server"],
 			        File["/etc/sshd/sshd_config"] ],
 		# changes to configuration cause service restart
 		subscribe  => File["/etc/sshd/sshd_config"],
+	}
+
+	ssh_authorized_key{"matt-key-pair":
+	}
+
+	ssh_authorized_key {'yufang-key-pair":
 	}
 }
 
