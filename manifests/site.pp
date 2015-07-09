@@ -7,7 +7,7 @@ node ip-10-0-6-127 {
 }
 
 #puppet master
-node ip-10-0-6-254 {
+node ip-10-0-6-135 {
 	cron { "puppet update":
 	   	command => "cd /etc/puppet && git pull -q origin master",
 	   	user => root,
