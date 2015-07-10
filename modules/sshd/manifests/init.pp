@@ -14,6 +14,8 @@ class sshd {
 	service { "sshd":
 		enable     => true,
 		ensure     => running,
+		hasstatus  => true,
+		hasrestart => true,
 		require    => [ Package["openssh-server"],
 			       	    File["/etc/ssh/sshd_config"], ],
 		subscribe  => File["/etc/ssh/sshd_config"],
