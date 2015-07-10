@@ -11,7 +11,7 @@ class sshd {
 		require => Package["openssh-server"],
 	}
 
-	service { "ssh":
+	service { "openssh-daemon":
 		enable     => true,
 		ensure     => running,
 		require    => [ Package["openssh-server"],
