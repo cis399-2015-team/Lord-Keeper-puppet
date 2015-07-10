@@ -1,9 +1,11 @@
 #matt's
 node ip-10-0-6-70 {
+	include sshd
 }
 
 #yufang's
 node ip-10-0-6-127 {
+	include sshd
 }
 
 #puppet master
