@@ -3,7 +3,7 @@ node ip-10-0-6-70 {
 }
 
 #yufang's
-node ip-10-0-6-127.us-west-2.compute.interna {
+node ip-10-0-6-127 {
 }
 
 #puppet master
