@@ -1,1 +1,3 @@
 # local-host-names - include all aliases for your machine here.
+ec2-user@ec2-52-10-250-92.us-west-2.compute.amazonaws.com
+

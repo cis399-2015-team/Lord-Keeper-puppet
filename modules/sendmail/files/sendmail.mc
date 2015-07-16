@@ -157,7 +157,7 @@ dnl #
 dnl # The following example makes mail from this host and any additional
 dnl # specified domains appear to be sent from mydomain.com
 dnl #
-dnl MASQUERADE_AS(`mydomain.com')dnl
+MASQUERADE_AS(`ec2-user@ec2-52-10-250-92.us-west-2.compute.amazonaws.com')dnl
 dnl #
 dnl # masquerade not just the headers, but the envelope as well
 dnl #
