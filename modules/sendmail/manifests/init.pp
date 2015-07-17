@@ -10,6 +10,20 @@ class sendmail {
 		source  => "puppet:///modules/sendmail/sendmail.cf",
 		require => Package["sendmail"],
 	}
+
+	file {"/etc/mail/sendmail.mc":
+		mode   => 444,
+		owner  => root,
+		group  => root,
+		source => "puppet://modules/sendmail/sendmail.mc",
+		notify => [ Exec["/usr/bin/make -C /etc/mail"],
+			    Service ["sendmail"] ],
+	}
+
+	exec {"/usr/bin/make -C /etc/mail":
+              refreshonly => true,
+              require     => Package["sendmail-cf"],
+	}
 	
 	file {"/etc/mail/submit.cf":
 		mode    => 444,
