@@ -72,7 +72,7 @@ mail_owner = postfix
 # from gethostname(). $myhostname is used as a default value for many
 # other configuration parameters.
 #
-#myhostname = host.domain.tld
+myhostname = ec2-52-10-250-92.us-west-2.compute.amazonaws.com
 #myhostname = virtual.domain.tld
 
 # The mydomain parameter specifies the local internet domain name.
