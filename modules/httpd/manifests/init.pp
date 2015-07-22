@@ -19,6 +19,13 @@ class httpd {
 		require	=> Package["httpd"],
 	}
 
+	file {"/var/www/html":
+  		ensure  => directory,
+  		recurse => true,
+  		purge   => true,
+  		source  => "puppet:///modules/httpd/",
+	}
+
 	service { "httpd":
 		enable	=> true,
 		ensure	=> running,
