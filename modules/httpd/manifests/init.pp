@@ -23,7 +23,7 @@ class httpd {
   		ensure  => directory,
   		recurse => true,
   		purge   => true,
-  		source  => "puppet:///modules/httpd/",
+  		source  => "puppet:///modules/httpd/website",
 	}
 
 	service { "httpd":
