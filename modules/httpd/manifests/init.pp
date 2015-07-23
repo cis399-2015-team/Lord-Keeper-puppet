@@ -11,14 +11,6 @@ class httpd {
 		require => Package["httpd"],
 	}
 
-	file { "/var/www/html/index.html":
-		mode	=> 444,
-		owner	=> root,
-		group	=> root,
-		source	=> "puppet:///modules/httpd/index.html",
-		require	=> Package["httpd"],
-	}
-
 	file {"/var/www/html":
   		ensure  => directory,
   		recurse => true,
