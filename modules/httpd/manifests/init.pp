@@ -22,7 +22,6 @@ class httpd {
 		enable	=> true,
 		ensure	=> running,
 		require	=> [ Package["httpd"],
-				File["/etc/httpd/conf/httpd.conf"],
-				File["/var/www/html/index.html"], ],
+				File["/etc/httpd/conf/httpd.conf"],],
 	}
 }
