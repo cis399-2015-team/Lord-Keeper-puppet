@@ -15,4 +15,12 @@ class mysql {
 		require    => [ Package["mysql-server"],
 						Package["mysql"], ],
 	}
+
+	file { "/etc/my.cnf":
+		mode    => 444,
+		owner   => root,
+		group   => root,
+		source  => "puppet:///modules/mysql/my.cnf",
+		require => Package["mysql"],
+	}
 }
