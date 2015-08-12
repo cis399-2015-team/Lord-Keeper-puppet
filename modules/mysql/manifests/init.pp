@@ -13,7 +13,6 @@ class mysql {
 		hasstatus  => true,
 		hasrestart => true,
 		require    => [ Package["mysql-server"],
-						Package["mysql"],
-					  ],
+						Package["mysql"], ],
 	}
 }
