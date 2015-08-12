@@ -4,7 +4,7 @@ class mysql {
 	}
 
 	package { 
-		"mysql-server" => installed;
+		"mysql-server": ensure => installed;
 	}
 
 	service { "mysqld":
