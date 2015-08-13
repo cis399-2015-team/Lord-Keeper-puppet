@@ -3,6 +3,10 @@ class php {
 		"php": ensure => installed;
 	}
 
+	package {
+		"php-mysql": ensure => installed;
+	}
+
 	file { "/etc/php.ini":
 		mode    => 444,
 		owner   => root,
