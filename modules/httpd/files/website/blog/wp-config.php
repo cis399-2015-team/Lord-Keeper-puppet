@@ -25,7 +25,7 @@ define('DB_USER', 'LordKeeper');
 define('DB_PASSWORD', 'aerERddfao_23529_RY');
 
 /** MySQL hostname */
-define('DB_HOST', 'localhost');
+define('DB_HOST', 'ec2-52-10-250-92.us-west-2.compute.amazonaws.com');
 
 /** Database Charset to use in creating database tables. */
 define('DB_CHARSET', 'utf8');
