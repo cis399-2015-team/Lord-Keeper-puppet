@@ -21,7 +21,6 @@ class mysql {
 		owner   => root,
 		group   => root,
 		source  => "puppet:///modules/mysql/my.cnf",
-		require    => [ Package["mysql-server"],
-						Package["mysql"], ],
+		require => Package["mysql"],
 	}
 }
